@@ -1,0 +1,14 @@
+// Save this file as "script.js" and upload it to your GitHub repository
+document.addEventListener("DOMContentLoaded", function () {
+    // Wait for the page to load completely
+    const randomDelay = Math.floor(Math.random() * (60000 - 2000 + 1)) + 2000; // Random delay between 2 to 60 seconds
+
+    setTimeout(() => {
+        const videoElement = document.querySelector('.ytp-large-play-button');
+        if (videoElement) {
+            videoElement.click(); // Simulates a user click on the play button
+        } else {
+            console.warn("Play button not found! Check your HTML structure.");
+        }
+    }, randomDelay); // Delay before triggering the click
+});
